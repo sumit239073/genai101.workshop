@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Phone Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Phone Fun Facts</h1>
+        <button id="factButton">Show a Fun Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const funFacts = [
+            "The first mobile phone call was made on April 3, 1973, by Martin Cooper, a Motorola researcher.",
+            "The first mobile phone weighed 2.5 pounds and was 10 inches long.",
+            "There are more mobile phones in the world than there are people.",
+            "The average person checks their mobile phone about 150 times a day.",
+            "The first smartphone was the IBM Simon, released in 1994.",
+            "Mobile phones have more computing power than the computers used for the Apollo 11 moon landing.",
+            "The most expensive mobile phone ever sold was a custom iPhone 5, worth $15 million.",
+            "Nomophobia is the fear of being without your mobile phone.",
+            "In Japan, 90% of mobile phones are waterproof because people use them even in the shower.",
+            "Mobile gaming accounts for more than 50% of the global gaming market."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            document.getElementById('factDisplay').textContent = funFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
